@@ -30,19 +30,30 @@ class sol
         return res;
     }
 
-   
+   public boolean CheckStringRotation(String s1,String s2){
+        String s3=  s1+s1;
+        if(s1.length()==s1.length() && s3.contains(s2)){
+            return true;
+        }
+        else{
+            return false;
+        }
+   }
 }  
 public class PracticeCoding {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-
-        sol obj= new sol();
-        System.out.println(obj.isPrime(n));
+         sol obj= new sol();
+        // int n=sc.nextInt();
+       
+        // System.out.println(obj.isPrime(n));
         
-        String s="a2b3c1";
-         System.out.println(obj.CheckString(s));
+        // String s="a2b3c1";
+        //  System.out.println(obj.CheckString(s));
       
+         String mystr="ABCD";
+         String s2="BCDA";
+         System.out.println(obj.CheckStringRotation(mystr, s2));
     
     }
     
